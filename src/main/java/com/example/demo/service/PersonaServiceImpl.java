@@ -24,6 +24,7 @@ public class PersonaServiceImpl implements PersonaService {
     @Override
     public Respuesta crearPersona(PersonaRequest request) {
         Respuesta response=new Respuesta();
+        System.out.printf("persona "+personaRepository.consultarNumeroDocumento(request.getNumeroDocumento()));
         Persona persona=new Persona();
         persona.setTipoDocumento(tipoDocumento);
         persona.setCargo(1);
